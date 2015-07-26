@@ -1,0 +1,1 @@
+Simple example for a Jetty-based WebSocket server and a Java and JavaScript client.
