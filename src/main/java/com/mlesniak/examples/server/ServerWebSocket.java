@@ -1,4 +1,4 @@
-package com.mlesniak.examples;
+package com.mlesniak.examples.server;
 
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  * @author Michael Lesniak (mlesniak@micromata.de)
  */
 @WebSocket
-public class ChatWebSocket {
+public class ServerWebSocket {
   private Session session;
   private ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 

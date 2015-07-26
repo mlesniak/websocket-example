@@ -1,4 +1,4 @@
-package com.mlesniak.examples;
+package com.mlesniak.examples.server;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
@@ -13,7 +13,7 @@ import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
  *
  * @author Michael Lesniak (mlesniak@micromata.de)
  */
-public class Main {
+public class ServerMain {
   public static void main(String[] args) throws Exception {
     Server server = new Server(8090);
 
@@ -39,7 +39,7 @@ public class Main {
   public static class ChatServlet extends WebSocketServlet {
     @Override
     public void configure(WebSocketServletFactory factory) {
-      factory.register(ChatWebSocket.class);
+      factory.register(ServerWebSocket.class);
     }
   }
 }
